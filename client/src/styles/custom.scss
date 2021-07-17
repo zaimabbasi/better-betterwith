@@ -1,0 +1,40 @@
+/* make the customizations */
+$better-primary: #8ae3d0;
+$better-secondary: #a7862a;
+$better-tertiary: #f7f1e6;
+
+// $theme-colors: (
+//     "info": tomato,
+//     "danger": hsl(180, 100%, 25%)
+// );
+
+// $link-color: orange;
+// $dropdown-color: #a7862a;
+// $dropdown-link-color: #a7862a;
+
+
+// // $component-active-bg: #8ae3d0;
+
+
+
+
+// $navbar-light-brand-color: $better-primary;
+
+
+// navbar
+$navbar-light-color: $better-secondary;
+$navbar-light-toggler-border-color: $better-secondary;
+$navbar-light-hover-color: $better-tertiary;
+$navbar-light-active-color: $better-tertiary;
+// dropdown
+$dropdown-bg: $better-tertiary;
+$dropdown-link-hover-bg: $better-primary;
+$dropdown-link-color: $better-secondary;
+$dropdown-link-hover-color: $better-tertiary;
+// component
+$component-active-bg: $better-primary;
+
+
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";

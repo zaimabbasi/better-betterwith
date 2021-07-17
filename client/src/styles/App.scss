@@ -1,0 +1,32 @@
+@import "./custom.scss";
+
+// Header
+#header {
+    background-color: $better-primary;
+    text-transform: uppercase;
+    
+    .brand-image {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flavor-image {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar {
+        font-weight: bold;
+    }
+
+}
+
+// Footer
+#footer {
+    background-color: $better-primary;
+    color: $better-secondary;
+}

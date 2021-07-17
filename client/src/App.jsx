@@ -1,9 +1,20 @@
 import React from "react";
-import Home from "./components/Home";
+// import custom components
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+// import custom styles
+import "./styles/App.scss";
 
 
 const App = () => {
-  return <Home />;
+  return (
+  <>
+  <Header />
+  <p>this is some paragraph</p>
+  <Footer />
+  </>
+  );
 }
+
 
 export default App;

@@ -1,4 +1,5 @@
 import React from "react";
+import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -41,10 +42,16 @@ const Header = () => {
                     <Row>
                         {
                           flavors.map(item => {
-                            return <DropdownItemFlavor 
-                            name={item.name}
-                            img={item.img}
-                            />
+                            return (
+                            <Col lg="2" md="4" sm="6">
+                              <DropdownItemFlavor 
+                              key={item.id}
+                              name={item.name}
+                              img={item.img}
+                              alt={"better-flavor"}
+                              />
+                            </Col>
+                            );
                           })
                         }
                     </Row>

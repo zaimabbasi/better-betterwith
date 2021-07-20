@@ -29,4 +29,45 @@
 #footer {
     background-color: $better-primary;
     color: $better-secondary;
+
+    .container {
+        padding: 1rem 1rem;
+
+        .subscribe {
+            margin-bottom: 2rem;
+            
+            .btn-secondary {
+                border-radius: 1rem;
+                color: $better-tertiary;
+            }
+        }
+
+        .site-links {
+            margin-bottom: 2rem;
+            
+            a {
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+    
+            .email {
+                margin-bottom: 1rem;
+            }
+    
+            .social {
+            
+                a {
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+    
+        .copyright {
+            text-align: center;
+        }
+    }
 }

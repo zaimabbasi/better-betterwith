@@ -39,11 +39,11 @@ const Footer = () => {
                     
                     <Col md="3">
                         <div className="site-links">
-                            <a href="/">Store Request</a>
-                            <a href="/store">Store Locator</a>
+                        <a href="/store">Store Locator</a>
+                            <a className="link">Store Request</a>
                             <a href="/contact">Contact</a>
                             <a href="/press">Press</a>
-                            <a href="/privacy">Privacy Policy</a>
+                            <a className="link">Privacy Policy</a>
                         </div>
                     </Col>
 

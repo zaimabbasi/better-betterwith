@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Row from "react-bootstrap/Row";
 // import custom components
-import DropdownItemFlavor from "./DropdownItemFlavor";
+import DropdownItemFlavor from "./sub_components/DropdownItemFlavor";
 
 
 const Header = () => {
@@ -73,7 +73,7 @@ const Header = () => {
                 
                 <Nav.Link href="/store">Store Locator</Nav.Link>
                 
-                <NavDropdown title="About">
+                <NavDropdown title="About" href="/about">
                   <NavDropdown.Item href="/story">Our Story</NavDropdown.Item>
                   <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
                 </NavDropdown>

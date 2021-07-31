@@ -5,6 +5,7 @@ $better-tertiary: #f7f1e6;
 
 // override default secondary variant
 $secondary: $better-secondary;
+$primary: $better-primary;
 
 // navbar
 $navbar-light-color: $better-secondary;
@@ -22,8 +23,8 @@ $component-active-bg: $better-primary;
 // link
 $link-color: $better-secondary;
 $link-hover-color: $better-tertiary;
-
-
+// carousel
+$carousel-control-color: $better-secondary;
 
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";

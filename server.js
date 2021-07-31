@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
@@ -7,7 +6,8 @@ const cors = require("cors");
 require("dotenv/config");
 
 const app = express();
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 app.use(cors());
 
 
@@ -20,47 +20,33 @@ mongoose.connect(process.env.DB_URI, {useNewUrlParser: true, useUnifiedTopology:
     console.log(err);
 });
 
+const itemSchema = new mongoose.Schema({
+    name: String,
+    img: String
+});
+
+const Flavor = mongoose.model("flavor", itemSchema);
+const Brand = mongoose.model("brand", itemSchema);
+
+
 
 // get /
-app.get("/", (req, res) => {
+app.get("/flavors", (req, res) => {
     
-    const flavors = [
-        {
-            id: "1",
-            name: "Cream",
-            img: "Cream.6939369f.png"
-
-        },
-        {
-            id: "2",
-            name: "Strawberry",
-            img: "Strawberry.6d340779.png"
-        },
-        {
-            id: "3",
-            name: "Chocolate",
-            img: "Chocolate.12b46eb7.png"
-        },
-        {
-            id: "4",
-            name: "Vanilla",
-            img: "Vanilla.244c61b4.png"
-        },
-        {
-            id: "5",
-            name: "Coffee",
-            img: "Coffee.b7dc4292.png"
-        },
-        {
-            id: "6",
-            name: "Caramel",
-            img: "Caramel.f8d8b422.png"
-        }
-    ];
-
-    console.log(JSON.stringify(flavors));
-    res.json(flavors);
+    Flavor.find((err, flavors) => {
+        if (err)    res.send(err);
+        else        res.send(flavors);
+    });
 });
+
+app.get("/brands", (req, res) => {
+    
+    Brand.find((err, brands) => {
+        if (err)    res.send(err);
+        else        res.send(brands);
+    });
+});
+
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

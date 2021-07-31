@@ -1,28 +1,46 @@
 @import "./custom.scss";
 
+// Global
+.btn {
+    border-radius: 2rem;
+}
+
+h1 {
+    color: $better-primary; 
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h3 {
+    color: $better-secondary;
+    font-size: 1.3rem;
+}
+
+
 // Header
 #header {
     background-color: $better-primary;
     text-transform: uppercase;
     
-    .brand-image {
-        max-width: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .flavor-image {
-        max-width: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .navbar {
-        font-weight: bold;
+        font-weight: bold;   
     }
 
+    .navbar-brand {
+        
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .dropdown-item {
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
 // Footer
@@ -30,44 +48,49 @@
     background-color: $better-primary;
     color: $better-secondary;
 
-    .container {
-        padding: 1rem 1rem;
+    .btn-secondary {
+        color: $better-tertiary;
+    }
 
-        .subscribe {
-            margin-bottom: 2rem;
-            
-            .btn-secondary {
-                border-radius: 1rem;
-                color: $better-tertiary;
-            }
+    .social {
+        margin-bottom: 1rem;
+        
+        a {
+            margin-right: 1rem;
         }
+    }
 
-        .site-links {
-            margin-bottom: 2rem;
-            
-            a {
-                display: block;
-                margin-bottom: 1rem;
-            }
-        }
+    .site-links {
 
-        .contact-info {
-            margin-bottom: 2rem;
-    
-            .email {
-                margin-bottom: 1rem;
-            }
-    
-            .social {
-            
-                a {
-                    margin-right: 1.5rem;
-                }
-            }
+        a {
+            text-decoration: none;    
         }
-    
-        .copyright {
-            text-align: center;
+    }
+}
+
+// Home
+#home {
+    text-align: center;
+
+    .carousel .thumb:focus {
+        border: 3px solid #fff;
+        outline: none; 
+    }
+    .carousel .thumb.selected, .carousel .thumb:hover {
+        border: 3px solid $better-secondary; 
+    }
+
+    .btn-primary {
+        color: $better-tertiary;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .content {
+        padding: 2rem;
+
+        .content-inner {
+            padding-bottom: 1.5rem;
         }
     }
 }

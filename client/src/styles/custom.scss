@@ -1,11 +1,13 @@
 /* make the customizations */
 $better-primary: #8ae3d0;
 $better-secondary: #a7862a;
-$better-tertiary: #f7f1e6;
+$better-tertiary: #f8efe6;
+// $better-tertiary: #f7f1e6;   // was using previously
 
 // override default secondary variant
-$secondary: $better-secondary;
 $primary: $better-primary;
+$secondary: $better-secondary;
+$light: $better-tertiary;
 
 // navbar
 $navbar-light-color: $better-secondary;

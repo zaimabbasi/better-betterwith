@@ -25,8 +25,15 @@ const itemSchema = new mongoose.Schema({
     img: String
 });
 
+const contactSchema = new mongoose.Schema({
+    dept: String,
+    name: String,
+    email: String
+});
+
 const Flavor = mongoose.model("flavor", itemSchema);
 const Brand = mongoose.model("brand", itemSchema);
+const Contact = mongoose.model("contact", contactSchema);
 
 
 
@@ -69,6 +76,13 @@ app.get("/excluded-ingredients", (req, res) => {
     ];
 
     res.send(excluded);
+});
+
+app.get("/contacts", (req, res) => {
+    Contact.find((err, contacts) => {
+        if (err)    res.send(err);
+        else        res.send(contacts);
+    });
 });
 
 

@@ -1,28 +1,40 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import CarouselBrands from "../sub-components/CarouselBrands";
-import Button from "react-bootstrap/Button";
-
 
 const Home = (props) => {
+    const [brands, setBrands] = React.useState([]);
+
+    React.useEffect(() => {
+
+        const fetchBrands = async () => {
+            const response = await fetch("/brands");
+            const data = await response.json();
+    
+            setBrands(data);
+        }
+
+        fetchBrands();
+    }, []);
+
     return (
         <section id="home">
-            <div>
-                <img className="w-100" src="/images/hotline.jpg" alt="" />
-            </div>
+            <img className="w-100" src="/images/hotline.jpg" alt="Hotline" />
 
-
-            <div id="carousel" className="section">
+            <div id="carousel" className="section text-center">
                 <Container>
                     <div className="section-inner">
                         <h1>As Seen On</h1>
+                    </div>
 
-                        <CarouselBrands />
+                    <div className="section-inner">
+                        <CarouselBrands data={brands} />
                     </div>
                 </Container>
             </div>
 
-            <div className="section">
+            <div className="section text-center">
                 <Container>
                     <div className="section-inner">
                         <h1>Full of Flavour, not sugar</h1>
@@ -43,7 +55,7 @@ const Home = (props) => {
                 </Container>
             </div>
 
-            <div className="section">
+            <div className="section text-center">
                 <Container>
                     <div className="section-inner">
                         <h1>Uncompromising</h1>
@@ -56,18 +68,19 @@ const Home = (props) => {
                 </Container>
             </div>
 
-            <div className="section">
+            <div className="section text-center">
                 <Container>
                     <div className="section-inner">
                         <h1>Store Locator</h1>
                     </div>
+
                     <div className="section-inner">
-                        <img className="w-100" src="images/map.png" alt="Betterwith Stock" />
+                        <img className="w-100" src="images/map.png" alt="Map" />
                     </div>
                 </Container>
             </div>
 
-            <div className="section">
+            <div className="section text-center">
                 <Container>
                     <div className="section-inner">
                         <h3>Can’t find our ice cream in your usual grocery store, or any stores near you? Well, fellow Canadians, we want to change that, but we need your help. Click below to request our ice cream in your local store.</h3>

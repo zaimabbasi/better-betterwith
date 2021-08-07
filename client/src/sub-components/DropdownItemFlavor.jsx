@@ -1,7 +1,6 @@
 import React from "react";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-
 const DropdownItemFlavor = (props) => {
     return (
         <NavDropdown.Item style={{textAlign: "center"}} href="/flavors">
@@ -10,6 +9,5 @@ const DropdownItemFlavor = (props) => {
         </NavDropdown.Item>
     );
 };
-
 
 export default DropdownItemFlavor;

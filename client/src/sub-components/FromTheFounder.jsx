@@ -7,11 +7,11 @@ const FromTheFounder = (props) => {
         <div className="from-the-founder">
             <Row>
                 <Col md="6">
-                    <img className="mb-4 w-100" src="images/woman.jpg" alt="Woman" />
+                    <img className="w-100 mb-4" src="images/woman.jpg" alt="Woman" />
                 </Col>
 
                 <Col md="6">
-                    <h3>From The Founder</h3>
+                    <h3>From The Founder:</h3>
 
                     <p>Before ice cream, my entrepreneurial journey was all about a different dessert.</p>
 
@@ -23,7 +23,7 @@ const FromTheFounder = (props) => {
 
                     <p>Life really is, BETTERWITH ice cream!</p>
 
-                    <img className="mt-4 mb-4 w-25" src="images/sign.jpg" alt="Sign" />
+                    <img className="w-25 mt-4 mb-4" src="images/sign.jpg" alt="Sign" />
 
                     <p>Lori Joyce</p>
                     

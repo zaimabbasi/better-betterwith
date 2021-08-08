@@ -41,7 +41,7 @@ const Story = (props) => {
                 </Container>
             </div>
 
-            <div id="from-the-founder" className="section">
+            <div className="section">
                 <Container>
                     <div className="section-inner">
                         <FromTheFounder />

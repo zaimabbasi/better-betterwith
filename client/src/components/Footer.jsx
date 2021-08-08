@@ -16,6 +16,10 @@ const Footer = (props) => {
                     <Row>
                         <Col md="6">
                             <div className="section-inner">
+                                <p>Be the first to receive updates, store promotions and giveaways.</p>
+                            </div>
+                            
+                            <div className="section-inner">
                                 <SubscribeForm />
                             </div>
                         </Col>

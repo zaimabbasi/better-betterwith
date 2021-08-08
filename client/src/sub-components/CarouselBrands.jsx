@@ -14,9 +14,8 @@ const CarouselBrands = (props) => {
             {
                 props.data.map(brand => {
                     return (
-                        <div>
+                        <div key={brand._id}>
                             <img
-                                key={brand._id}
                                 className="w-50"
                                 src={`images/brands/${brand.img}`}
                                 alt={brand.name}

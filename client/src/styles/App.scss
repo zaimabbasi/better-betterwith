@@ -23,13 +23,18 @@ h1 {
     color: $better-primary; 
     text-transform: uppercase;
     font-weight: bold;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
 }
 
 h3 {
     color: $better-secondary;
     font-size: 1.3rem;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
+}
+
+h4 {
+    color: $better-secondary;
+    font-size: 1.1rem;
 }
 
 .yt-video {
@@ -53,7 +58,6 @@ h3 {
     text-transform: uppercase;
     
     .navbar {
-        font-size: 1.2rem;
         font-weight: bold;
     }
 
@@ -133,12 +137,18 @@ h3 {
 // Story
 #story {
     
-    #from-the-founder {
+    .from-the-founder {
         text-align: left;
         color: $better-secondary;
 
         h3 {
             text-transform: uppercase;
         }
+    }
+}
+
+#contact {
+    .request-form {
+        color: $better-secondary;
     }
 }

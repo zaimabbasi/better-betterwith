@@ -128,6 +128,34 @@ app.post("/request", (req, res) => {
 
 app.post("/subscribe", (req, res) => {
     console.log("subscription: ", req.body);
+
+    const newEmail = req.body.email;
+
+    Subscription.find({email: newEmail}, (err, subscriptions) => {
+        if (err) {
+            res.send(err);
+        }
+        else {
+            if (subscriptions.length) {
+                res.send(null);
+            }
+            else {
+                const subscription = new Subscription({
+                    email: newEmail
+                });
+    
+                subscription.save((error, subscription) => {
+                    if (error) {
+                        res.send(error);
+                    }
+                    else {
+                        res.send(subscription);
+                    } 
+                })
+            }
+        } 
+    });
+
 });
 
 const PORT = process.env.PORT;

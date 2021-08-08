@@ -30,7 +30,6 @@ const Contact = (props) => {
                                     return (
                                         <Col lg="3" className="mt-3 mb-3" key={contact._id}>
                                             <ContactCard
-                                                
                                                 dept={contact.dept}
                                                 name={contact.name}
                                                 email={contact.email}

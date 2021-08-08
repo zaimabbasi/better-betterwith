@@ -8,6 +8,10 @@ import Button from "react-bootstrap/Button";
 const SubscribeForm = (props) => {
     const [emailValue, setEmailValue] = React.useState("");
 
+    const onEmailChange = (e) => {
+        setEmailValue(e.target.value);
+    }
+
     const handleSubmit = (e) => {
         const reqBody = {
             email: emailValue
@@ -16,14 +20,9 @@ const SubscribeForm = (props) => {
         axios.post("/subscribe", reqBody)
             .then(res => {
                 console.log(res);
-                console.log(res.data);
             });
 
         e.preventDefault();
-    }
-
-    const onEmailChange = (e) => {
-        setEmailValue(e.target.value);
     }
 
     return (

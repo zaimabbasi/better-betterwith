@@ -20,7 +20,7 @@ const Contact = (props) => {
     }, []);
 
     return (
-        <section id="contact">
+        <div id="contact">
             <div className="section">
                 <Container>
                     <div className="section-inner">
@@ -51,13 +51,13 @@ const Contact = (props) => {
                         <h1>Are You Betterwith Ice Cream</h1>
                     </div>
 
-                    <div className="section-inner">
+                    <div className="section-inner mt-5">
                         <RequestForm />
                     </div>
                 </Container>
 
             </div>
-        </section >
+        </div >
     );
 };
 

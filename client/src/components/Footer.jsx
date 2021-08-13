@@ -10,7 +10,7 @@ import CopyrightInfo from "../sub-components/CopyrightInfo";
 
 const Footer = (props) => {
     return (
-        <section id="footer">
+        <div id="footer">
             <div className="section">
                 <Container>
                     <Row>
@@ -54,7 +54,7 @@ const Footer = (props) => {
                     </Row>
                 </Container>
             </div>
-        </section>
+        </div>
     );
 };
 

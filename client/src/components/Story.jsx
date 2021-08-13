@@ -9,7 +9,7 @@ import YoutubeVideo from "../sub-components/YoutubeVideo";
 
 const Story = (props) => {
     return (
-        <section id="story">
+        <div id="story">
             <YoutubeVideo src={"https://www.youtube.com/embed/gBu8-dlkEaY"} />
             
             <div className="section">
@@ -18,7 +18,7 @@ const Story = (props) => {
                         <Tradition />
                     </div>
 
-                    <div className="section-inner text-center">
+                    <div className="section-inner text-center mt-5">
                         <Button variant="primary" href="/store">Where to Buy</Button>
                     </div>
 
@@ -48,8 +48,7 @@ const Story = (props) => {
                     </div>
                 </Container>
             </div>
-
-        </section>
+        </div>
     );
 };
 

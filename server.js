@@ -18,11 +18,6 @@ mongoose.connect(process.env.DB_URI, {useNewUrlParser: true, useUnifiedTopology:
     console.log(err);
 });
 
-const itemSchema = new mongoose.Schema({
-    name: String,
-    img: String
-});
-
 const contactSchema = new mongoose.Schema({
     dept: String,
     name: String,
@@ -47,8 +42,6 @@ const requestSchema = new mongoose.Schema({
     message: String
 });
 
-const Flavor = mongoose.model("flavor", itemSchema);
-const Brand = mongoose.model("brand", itemSchema);
 const Contact = mongoose.model("contact", contactSchema);
 const Subscription = mongoose.model("subscription", subscriptionSchema);
 const Request = mongoose.model("request", requestSchema);

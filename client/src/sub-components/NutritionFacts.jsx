@@ -15,11 +15,11 @@ const NutritionFacts = (props) => {
 
                 <Row>
                     <Col md="6">
-                        <img className="float-md-end mt-4 mb-4" src="images/nutri1.png" alt="" />
+                        <img className="float-md-end mt-4" src="images/nutri1.png" alt="" />
                     </Col>
 
                     <Col md="6" >
-                        <img className="float-md-start mt-4 mb-4" src="images/nutri2.png" alt="" />
+                        <img className="float-md-start mt-4" src="images/nutri2.png" alt="" />
                     </Col>
                 </Row>
             </div>

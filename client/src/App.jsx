@@ -1,7 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Route} from "react-router-dom";
-
-// import custom components
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -12,28 +10,23 @@ import Story from "./components/Story";
 import Contact from "./components/Contact";
 import Press from "./components/Press";
 import Request from "./components/Request";
-
-// import custom styles
 import "./styles/App.scss";
-
-
 
 const App = () => {
   return (
-  <Router>
-    <Header />
-    <Route path="/" exact component={Home} />
-    <Route path="/flavors" component={Flavors}></Route>
-    <Route path="/inside" component={Inside}></Route>
-    <Route path="/store" component={Store}></Route>
-    <Route path="/story" component={Story}></Route>
-    <Route path="/contact" component={Contact}></Route>
-    <Route path="/press" component={Press}></Route>
-    <Route path="/request" component={Request}></Route>
-    <Footer />
-  </Router>
+    <Router>
+      <Header />
+      <Route path="/" exact component={Home} />
+      <Route path="/flavors" component={Flavors} />
+      <Route path="/inside" component={Inside} />
+      <Route path="/store" component={Store} />
+      <Route path="/story" component={Story} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/press" component={Press} />
+      <Route path="/request" component={Request} />
+      <Footer />
+    </Router>
   );
 }
-
 
 export default App;

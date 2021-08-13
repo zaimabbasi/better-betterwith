@@ -7,16 +7,19 @@ import NutritionFacts from "../sub-components/NutritionFacts";
 
 const Inside = (props) => {
     return (
-        <section id="inside">
+        <div id="inside">
             <YoutubeVideo src={"https://www.youtube.com/embed/wQklne1hgS8"} />
 
-            <div className="section">
-                <Container>
-                    <div className="section-inner">
-                        <NoIngredients />
-                    </div>
-                </Container>
+            <div>
+                <div className="section">
+                    <Container>
+                        <div className="section-inner">
+                            <NoIngredients />
+                        </div>
+                    </Container>
+                </div>
             </div>
+
 
             <img className="w-100" src="images/icecream.png" alt="Ice Cream" />
 
@@ -24,12 +27,12 @@ const Inside = (props) => {
                 <Container>
                     <NutritionFacts />
 
-                    <div className="section-inner text-center">
+                    <div className="section-inner text-center mt-5">
                         <Button variant="primary" href="/story">Let's Compare Sugar</Button>
                     </div>
                 </Container>
             </div>
-        </section>
+        </div>
     );
 };
 

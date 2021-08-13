@@ -39,10 +39,16 @@ h4 {
 
 .carousel .thumb:focus {
     border: 3px solid #fff;
-    outline: none; 
+    outline: none;
 }
 .carousel .thumb.selected, .carousel .thumb:hover {
     border: 3px solid $better-secondary; 
+}
+.carousel {
+
+    ul {
+        padding-left: 0;
+    }
 }
 
 .yt-video {
@@ -117,6 +123,7 @@ h4 {
     
 
     #carousel {
+        
         
     }
 }

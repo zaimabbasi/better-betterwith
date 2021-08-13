@@ -46,6 +46,10 @@ const Contact = mongoose.model("contact", contactSchema);
 const Subscription = mongoose.model("subscription", subscriptionSchema);
 const Request = mongoose.model("request", requestSchema);
 
+app.get("/", (req, res) => {
+
+});
+
 // get /
 app.get("/flavors", (req, res) => {
     Flavor.find((err, flavors) => {

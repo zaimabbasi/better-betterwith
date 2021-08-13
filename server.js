@@ -1,10 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 
 require("dotenv/config");
 
 const app = express();
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors());
@@ -46,8 +48,8 @@ const Contact = mongoose.model("contact", contactSchema);
 const Subscription = mongoose.model("subscription", subscriptionSchema);
 const Request = mongoose.model("request", requestSchema);
 
-app.get("/", (req, res) => {
-    res.sendFile("index.html");
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname + "/index.html"));
 });
 
 // get /

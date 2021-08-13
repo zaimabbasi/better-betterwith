@@ -49,7 +49,7 @@ const Subscription = mongoose.model("subscription", subscriptionSchema);
 const Request = mongoose.model("request", requestSchema);
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/index.html"));
+    res.sendFile(path.join(__dirname + "public/index.html"));
 });
 
 // get /

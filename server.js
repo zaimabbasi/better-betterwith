@@ -47,7 +47,7 @@ const Subscription = mongoose.model("subscription", subscriptionSchema);
 const Request = mongoose.model("request", requestSchema);
 
 app.get("/", (req, res) => {
-
+    res.send("hello");
 });
 
 // get /

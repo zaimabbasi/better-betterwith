@@ -10,7 +10,7 @@ const Contact = (props) => {
 
     React.useEffect(() => {
         const getContacts = async () => {
-            const response = await fetch("/api/contacts");
+            const response = await fetch("/contacts");
             const data = await response.json();
 
             setContacts(data);

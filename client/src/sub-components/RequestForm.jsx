@@ -78,7 +78,7 @@ const RequestForm = (props) => {
             message: message
         };
 
-        axios.post("/request", reqBody)
+        axios.post("/api/request", reqBody)
         .then(res => {
             console.log(res);
         });

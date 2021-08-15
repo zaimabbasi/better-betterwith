@@ -17,7 +17,7 @@ const SubscribeForm = (props) => {
             email: emailValue
         };
 
-        axios.post("/subscribe", reqBody)
+        axios.post("/api/subscribe", reqBody)
             .then(res => {
                 console.log(res);
             });

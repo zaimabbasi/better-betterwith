@@ -1,5 +1,33 @@
 @import "./custom.scss";
 
+// @include media-breakpoint-up(xs);
+// @include media-breakpoint-up(sm);
+// @include media-breakpoint-up(md);
+// @include media-breakpoint-up(lg);
+// @include media-breakpoint-up(xl);
+
+@include media-breakpoint-up(xs) {
+
+    .display-xs {
+        display: initial;
+    }
+    
+    .display-lg {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+
+    .display-xs {
+        display: none;
+    }
+
+    .display-lg {
+        display: initial;
+    }
+}
+
 // Global
 .btn {
     border-radius: 2rem;
@@ -23,13 +51,11 @@ h1 {
     color: $better-primary; 
     text-transform: uppercase;
     font-weight: bold;
-    // padding-bottom: 1rem;
 }
 
 h3 {
     color: $better-secondary;
     font-size: 1.3rem;
-    // padding-bottom: 1rem;
 }
 
 h4 {
@@ -67,7 +93,6 @@ h4 {
 
 // Header
 #header {
-    background-color: $better-primary;
     text-transform: uppercase;
     
     .navbar {
@@ -75,13 +100,12 @@ h4 {
     }
 
     .navbar-brand {
-        margin-left: auto;
-        margin-right: auto;
-    }
+        margin: 1rem 0;
+        max-width: 75%;
 
-    .nav-link {
-        padding-right: 1rem;
-        padding-left: 1rem;
+        img {
+            max-width: 100%;
+        }
     }
 
     .dropdown-item {
@@ -119,13 +143,7 @@ h4 {
 
 // Home
 #home {
-
     
-
-    #carousel {
-        
-        
-    }
 }
 
 // Inside

@@ -19,7 +19,7 @@ const SubscribeForm = (props) => {
 
         axios.post("/api/subscribe", reqBody)
             .then(res => {
-                console.log(res);
+                console.log(res.data);
             });
 
         e.preventDefault();

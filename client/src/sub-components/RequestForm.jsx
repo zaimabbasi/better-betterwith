@@ -82,6 +82,8 @@ const RequestForm = (props) => {
         .then(res => {
             console.log(res);
         });
+
+        e.preventDefault();
     }
 
     return (
@@ -253,8 +255,6 @@ const RequestForm = (props) => {
 
                 <Button variant="secondary" type="submit">Submit</Button>
             </Form>
-
-
         </div>
     );
 }

@@ -7,26 +7,21 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Row from "react-bootstrap/Row";
 import ImageURLs from "../sub-components/ImageURLs";
 import FlavorsData from "../sub-components/FlavorsData";
+import NavbarBrand from "../sub-components/NavbarBrand";
 
 const Header = (props) => {
     const [openMenu, setOpenMenu] = React.useState(false);
 
     return (
         <div id="header">
-            <Navbar expand="lg">
+            <Navbar expand="lg" bg="primary">
                 <Container>
-                    <Navbar.Brand href="/">
-                        <img
-                            className="w-100"
-                            src={ImageURLs.brandImgURL}
-                            alt="Brand Logo"
-                        />
-                    </Navbar.Brand>
-                </Container>
-            </Navbar>
+                    <NavbarBrand
+                        className={"display-xs"}
+                        src={ImageURLs.brandImage.src}
+                        alt={ImageURLs.brandImage.alt}
+                    />
 
-            <Navbar expand="lg">
-                <Container>
                     <Navbar.Toggle className="ms-auto" aria-controls="basic-navbar-nav basic-navbar-nav-2" />
 
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -62,6 +57,13 @@ const Header = (props) => {
                             <Nav.Link href="/inside">What's not Inside</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
+
+                    <NavbarBrand
+                        className={"display-lg"}
+                        src={ImageURLs.brandImage.src}
+                        alt={ImageURLs.brandImage.alt}
+                    />
+
                     <Navbar.Collapse id="basic-navbar-nav-2">
                         <Nav className="ms-auto">
                             <Nav.Link href="/store">Store Locator</Nav.Link>

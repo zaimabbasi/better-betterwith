@@ -8,24 +8,19 @@ const Subscription = require("../models/subscription");
 
 
 // Routes
-router.get("/blah", (req, res) => {
-    const blah = {
-        name: "blah",
-        age: 2
-    }
-
-    res.send(blah);
-})
-
 router.get("/contacts", (req, res) => {
     Contact.find((err, contacts) => {
-        if (err)    res.send(err);
-        else        res.send(contacts);
+        if (err) {
+            res.send(err);
+        }
+        else {
+            res.send(contacts);
+        }
     });
 });
 
 router.post("/request", (req, res) => {
-    console.log("request has come: ", req.body);
+    console.log("/request: ", req.body);
 
     const request = new Request({
         firstName: req.body.firstName,
@@ -52,35 +47,20 @@ router.post("/request", (req, res) => {
 });
 
 router.post("/subscribe", (req, res) => {
-    console.log("subscription: ", req.body);
+    console.log("/subscribe: ", req.body);
 
-    const newEmail = req.body.email;
+    const subscription = new Subscription({
+        email: req.body.email
+    });
 
-    Subscription.find({email: newEmail}, (err, subscriptions) => {
+    subscription.save((err, subscription) => {
         if (err) {
             res.send(err);
         }
         else {
-            if (subscriptions.length) {
-                res.send(null);
-            }
-            else {
-                const subscription = new Subscription({
-                    email: newEmail
-                });
-    
-                subscription.save((error, subscription) => {
-                    if (error) {
-                        res.send(error);
-                    }
-                    else {
-                        res.send(subscription);
-                    } 
-                })
-            }
-        } 
+            res.send(subscription);
+        }
     });
-
 });
 
 module.exports = router;

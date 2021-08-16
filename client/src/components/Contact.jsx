@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -10,10 +11,14 @@ const Contact = (props) => {
 
     React.useEffect(() => {
         const getContacts = async () => {
-            const response = await fetch("/api/contacts");
-            const data = await response.json();
+            // const response = await fetch("/contacts");
+            // const data = await response.json();
 
-            setContacts(data);
+            // setContacts(data);
+            axios.get("/api/contacts")
+            .then(res => {
+                setContacts(res.data);
+            })
         }
 
         getContacts();

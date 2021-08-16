@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 
 // Schema
 const subscriptionSchema = new mongoose.Schema({
-    email: String
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    }
 });
 
 // Model

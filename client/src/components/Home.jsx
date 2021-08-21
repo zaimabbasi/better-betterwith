@@ -65,7 +65,7 @@ const Home = (props) => {
                 <div className="section">
                     <Container>
                         <div className="section-inner">
-                            <img className="w-100" src="images/stock.png" alt="Stock" />
+                            <img className="w-100" src="images/new_banner.png" alt="Banner" />
                         </div>
                     </Container>
                 </div>

@@ -18,7 +18,7 @@ const Flavors = (props) => {
                     {
                         FlavorsData.map((flavorItem, index) => {
                             return (
-                                <div className="section" key={flavorItem.id}>
+                                <div className="section-inner" key={flavorItem.id}>
                                     <Row>
                                         <Col md="6">
                                             <div className="section-inner text-center">
@@ -94,11 +94,12 @@ const Flavors = (props) => {
                                             </div>
                                         </Col>
                                     </Row>
-
+                                    
                                     {
                                         index < FlavorsData.length - 1 &&
                                         <hr />
                                     }
+                                    
                                 </div>
                             );
                         })

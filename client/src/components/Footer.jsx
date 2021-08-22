@@ -10,50 +10,42 @@ import CopyrightInfo from "../sub-components/CopyrightInfo";
 
 const Footer = (props) => {
     return (
-        <div id="footer">
-            <div className="section">
-                <Container>
-                    <Row>
-                        <Col md="6">
-                            <div className="section-inner">
-                                <p>Be the first to receive updates, store promotions and giveaways.</p>
-                            </div>
-                            
-                            <div className="section-inner">
-                                <SubscribeForm />
-                            </div>
-                        </Col>
+        <div id="footer" className="section">
+            <Container>
+                <Row>
+                    <Col md="6">
+                        <div className="section-inner">
+                            <p>Be the first to receive updates, store promotions and giveaways.</p>
 
-                        <Col md="3">
-                            <div className="section-inner">
-                                <SiteLinks />
-                            </div>
-                        </Col>
+                            <SubscribeForm />
+                        </div>
+                    </Col>
 
-                        <Col md="3">
-                            <div className="section-inner">
-                                <ContactInfo />
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                    <Col md="3">
+                        <div className="section-inner">
+                            <SiteLinks />
+                        </div>
+                    </Col>
 
-            <div className="section">
-                <Container>
-                    <Row>
-                        <Col>
-                            <div className="section-inner">
-                                <SocialLinks />
-                            </div>
+                    <Col md="3">
+                        <div className="section-inner">
+                            <ContactInfo />
+                        </div>
+                    </Col>
+                </Row>
+            
+                <Row>
+                    <Col>
+                        <div className="section-inner text-center">
+                            <SocialLinks />
+                        </div>
 
-                            <div className="section-inner">
-                                <CopyrightInfo />
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                        <div className="section-inner text-center">
+                            <CopyrightInfo />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };

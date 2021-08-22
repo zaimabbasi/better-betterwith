@@ -29,7 +29,7 @@ const SubscribeForm = (props) => {
         <div className="subscribe-form">
             <Form onSubmit={handleSubmit}>
                 <Row>
-                    <Col>
+                    <Col md="6">
                         <Form.Group className="mb-3" controlId="email">
                             <Form.Control
                                 required
@@ -40,7 +40,7 @@ const SubscribeForm = (props) => {
                         </Form.Group>
                     </Col>
 
-                    <Col>
+                    <Col md="6">
                         <Button variant="secondary" type="submit">Subscribe</Button>
                     </Col>
                 </Row>

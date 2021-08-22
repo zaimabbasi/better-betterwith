@@ -11,14 +11,10 @@ const Contact = (props) => {
 
     React.useEffect(() => {
         const getContacts = async () => {
-            // const response = await fetch("/contacts");
-            // const data = await response.json();
-
-            // setContacts(data);
             axios.get("/api/contacts")
-            .then(res => {
-                setContacts(res.data);
-            })
+                .then(res => {
+                    setContacts(res.data);
+                })
         }
 
         getContacts();
@@ -29,6 +25,10 @@ const Contact = (props) => {
             <div className="section">
                 <Container>
                     <div className="section-inner">
+                        <div className="text-center">
+                            <h1>Contact Us</h1>
+                        </div>
+
                         <Row className="justify-content-center">
                             {
                                 contacts.map(contact => {
@@ -44,23 +44,24 @@ const Contact = (props) => {
                                 })
                             }
                         </Row>
-
-                        <hr />
                     </div>
+
+                    <hr />
                 </Container>
             </div>
 
             <div className="section">
                 <Container>
-                    <div className="section-inner text-center">
-                        <h1>Are You Betterwith Ice Cream</h1>
-                    </div>
+                    <div className="section-inner">
+                        <div className="text-center">
+                            <h1>Are You Betterwith Ice Cream?</h1>
+                        </div>
 
-                    <div className="section-inner mt-5">
-                        <RequestForm />
+                        <div className="mt-5">
+                            <RequestForm />
+                        </div>
                     </div>
                 </Container>
-
             </div>
         </div >
     );

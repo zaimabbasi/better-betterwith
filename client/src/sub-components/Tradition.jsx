@@ -2,7 +2,7 @@ import React from "react-bootstrap";
 
 const Tradition = (props) => {
     return (
-        <div className="tradition text-center">
+        <div className="tradition">
             <h1>Tradition is BETTERWITH ice cream</h1>
 
             <h3>Innovation may be trending in the food industry today, but sometimes it’s best not to mess with perfection.</h3>

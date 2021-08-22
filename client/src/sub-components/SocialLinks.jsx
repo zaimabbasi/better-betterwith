@@ -2,7 +2,7 @@ import React from "react";
 
 const SocialLinks = (props) => {
     return (
-        <div className="social-links text-center">
+        <div className="social-links">
             <a href="http://facebook.com/betterwithfoods" target="_blank" rel="noreferrer">
                 <i className="fab fa-facebook-f"></i>
             </a>
